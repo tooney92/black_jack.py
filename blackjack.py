@@ -29,14 +29,9 @@ class players_bet_account():
         
     def player_bet_amount(self, bet_amount): 
         self.balance =  self.balance - bet_amount
-        
-        
-        
+                
 player_bet_account = players_bet_account(1500)
-    
-    
-    
-    
+     
 card_shape = ['spade', 'club', 'heart', 'diamond']
 
 king_royal_card = Royals('king', 10)
@@ -46,10 +41,7 @@ joker_royal_card = Royals('joker', 10)
 
 deck_main = [2, 3, 4, 5, 6, 7, 8, 9,10, king_royal_card.card_name(), queen_royal_card.card_name(), joker_royal_card.card_name(), 'Ace']
 
-
-
 deck = [2,'Ace']
-
 
 while player_bet_account.balance > 100:
     
@@ -61,13 +53,11 @@ while player_bet_account.balance > 100:
             continue
         if player_bet < player_bet_account.balance:
             break
-        
-    
+         
     print('your currnet balance after betting', player_bet, 'is:',player_bet_account.balance - player_bet)
    
     card1 = random.choice(deck_main)
     card2 = random.choice(deck_main)
-
 
     if type(card1) is int:
         print('your first card is',random.choice(card_shape),card1)
